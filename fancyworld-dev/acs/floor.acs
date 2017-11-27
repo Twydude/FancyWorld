@@ -1,0 +1,15 @@
+script "CheckFloor" (void)
+{
+	if(!CheckActorFloorTexture(0, "NUKAGE3"))
+	{
+		//Log(s:"Actor not on nukage, stopping...");
+		SetResultValue(1);
+		terminate;
+	}
+	else
+	{
+		//Log(s:"Actor on nukage.");
+		SetResultValue(0);
+		terminate;
+	}
+}
